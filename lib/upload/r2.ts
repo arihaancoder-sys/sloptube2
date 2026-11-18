@@ -21,8 +21,8 @@ export type R2ClientConfig = {
 /** An S3 client pointed at the account's R2 endpoint. */
 export function createR2Client(config: R2ClientConfig): S3Client {
   return new S3Client({
-    region: "auto",
-    endpoint: `https://${config.accountId}.r2.cloudflarestorage.com`,
+    region: "us-east-1",
+    endpoint: `https://supabase.co`,
     credentials: { accessKeyId: config.accessKeyId, secretAccessKey: config.secretAccessKey },
     // https://<account>.r2.cloudflarestorage.com/<bucket>/<key>, one host for every bucket.
     forcePathStyle: true,
